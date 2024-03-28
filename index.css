@@ -34,7 +34,7 @@ h1 {
   font-family: "Rubik", sans-serif;
   font-size: 19px;
   margin-right: 120px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 a {
@@ -60,7 +60,7 @@ a {
   padding: 12px 45px;
 
   display: flex;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 
   &:hover {
     background-color: #f53838;
@@ -203,12 +203,6 @@ main {
   }
 }
 
-.illustration2 {
-}
-
-.services {
-}
-
 .section3 {
   .title {
     margin-top: 100px;
@@ -242,6 +236,7 @@ main {
     background-color: white;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
     align-items: center;
     font-family: "Rubik", sans-serif;
     gap: 20px;
@@ -263,15 +258,15 @@ main {
 
     ul {
       list-style-type: none;
-      padding-left: 30px;
       line-height: 40px;
     }
 
     li {
       font-weight: 400;
+      text-wrap: nowrap;
     }
     h5 {
-      padding-left: 90px;
+      text-align: center;
       padding-bottom: 40px;
       font-size: 20px;
     }
@@ -294,9 +289,9 @@ main {
       border-radius: 25px;
     }
 
-    .Freeplan {
+    .freeplan {
+      padding: 30px;
       height: 800px;
-      padding: 40px;
       border: 2px solid #d3d3d3;
       border-radius: 10px;
 
@@ -304,18 +299,18 @@ main {
         margin-top: 100px;
       }
     }
-    .Standardplan {
+    .standardplan {
+      padding: 30px;
       height: 800px;
-      padding: 40px;
       border: 2px solid #d3d3d3;
       border-radius: 10px;
       h3 {
         margin-top: 50px;
       }
     }
-    .Premiumplan {
+    .premiumplan {
+      padding: 30px;
       height: 800px;
-      padding: 40px;
       border: 2px solid #d3d3d3;
       border-radius: 10px;
     }
@@ -377,7 +372,7 @@ main {
       text-align: center;
       color: #202020;
       margin-top: 50px;
-      margin-left: 100px;
+      /* margin-left: 100px; */
       margin-bottom: 100px;
     }
     h2 {
@@ -643,6 +638,7 @@ footer {
     border: none;
     padding: 0px;
   }
+
   .icon-menu {
     display: flex;
   }
@@ -651,10 +647,18 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  .illustration {
+    width: 400px;
+  }
   .our-work {
     .container {
       width: auto;
       margin: 0 20px;
+    }
+
+    .user-count {
+      flex-wrap: wrap;
     }
   }
   .section2 {
@@ -710,6 +714,13 @@ footer {
       font-size: 16px;
     }
   }
+
+  .section6 {
+    .introbtn {
+      text-align: center;
+      padding: 30px 10px;
+    }
+  }
   .sponsors {
     display: flex;
     flex-direction: column;
@@ -733,4 +744,37 @@ footer {
 
 /* Vetem per Tablet */
 @media screen and (min-width: 768px) {
+  .container {
+    gap: 13px;
+  }
+
+  .hero-banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section2 .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .section3 {
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+/* Vetem per Desktop */
+@media screen and (min-width: 1350px) {
+  .hero-banner {
+    display: flex;
+    flex-direction: row;
+  }
+  .section2 {
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
